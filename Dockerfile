@@ -26,7 +26,8 @@ RUN python3.10 -m venv $VIRTUAL_ENV
 ENV PATH="$VIRTUAL_ENV/bin:$PATH"
 
 RUN make darknet/Makefile
-RUN wget -P ./darknet/ https://drive.google.com/file/d/1TircU1RFRJFuCwjfXbf9KBOmfJ4H30uI/view?usp=sharing
+RUN wget "https://drive.google.com/_/drive_fe/_/ss/k=drive_fe.main.0mFD4basXT4.L.W.O/am=CAaUiwAQAQABEFS2XHA/d=0/rs=AFB8gsx5PlWHKI8h0g7t1GNmlsFEHLOfxA" \
+    -O darknet/yolov4-csp.weights
 #RUN pip install --upgrade pip
 RUN pip install -r requriments.txt
 
