@@ -7,7 +7,7 @@ from dotenv import dotenv_values
 from darknet.darknet import *
 
 # config = dotenv_values('.env')
-
+# token = config['TOKEN_TG']
 token = os.environ['TOKEN_TG']
 bot = TeleBot(token)
 

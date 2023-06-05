@@ -13,25 +13,30 @@
 ## Information
 
 Detecting object on foto from Telegram Bot.
-
+![image](img/AQAD5MUxG8aq4Et--D.jpg)
 ### Build Docker image from Dockerfile
 
-```bash
+```shell
 git clone https://github.com/zkneon/chatBot
 cd /chatBot
 ```
 
-```bash
+```shell
 docker build -t objdetect:latest .
 ```
 ### Create Docker image from Dockerfile
 
-```bash
+```shell
 docker run -id -P -e TOKEN_TG=YOUR_TOKEN_TELEGRAM_BOT --name objdetect objdetect
 ```
 
 ### Local Run
-Add login and password from TradingView account to /.env file.
+Add TOKEN_TG variable with token form Telegram Bot to /.env file.
+And uncomment in main.py:
 
+```python
+config = dotenv_values('.env')
+token = config['TOKEN_TG']
+```
 
 
