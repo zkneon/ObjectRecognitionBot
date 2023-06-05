@@ -25,6 +25,7 @@ RUN python3.10 -m venv $VIRTUAL_ENV
 ENV PATH="$VIRTUAL_ENV/bin:$PATH"
 
 RUN make darknet/Makefile
+RUN wget -P ./darknet/ https://drive.google.com/file/d/1TircU1RFRJFuCwjfXbf9KBOmfJ4H30uI/view?usp=sharing
 #RUN pip install --upgrade pip
 RUN pip install -r requriments.txt
 
