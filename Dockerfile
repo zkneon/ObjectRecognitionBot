@@ -13,7 +13,8 @@ RUN apt update
 ENV TZ=Europe/Moscow
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
-RUN apt install -y python3.10 \
+RUN apt install -y wget \
+    python3.10 \
     cmake \
     libopencv-dev \
     python3.10-venv \
