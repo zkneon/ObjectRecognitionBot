@@ -24,7 +24,7 @@ cd /chatBot
 ```shell
 docker build -t objdetect:latest .
 ```
-### Create Docker image from Dockerfile
+### Create Docker container from Dockerfile
 
 ```shell
 docker run -id -P -e TOKEN_TG=YOUR_TOKEN_TELEGRAM_BOT --name objdetect objdetect
