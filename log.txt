@@ -1,0 +1,4 @@
+
+-------------------------------********************-----------------------------
+Get fie from user:some_user: nikname:user_nikname
+File data: id-AQADmskxG9YWwEt-:size-211399: path-photos/file_62.jpg

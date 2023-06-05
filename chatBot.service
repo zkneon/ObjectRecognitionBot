@@ -1,0 +1,25 @@
+Description=ChatBot.v1
+After=network.target
+
+[Service]
+User=username
+Group=www-data
+WorkingDirectory=/home/chatBot
+Environment="PATH=/home/chatBot/bin"
+ExecStart=/home/chatBot/bin/python main.py --start
+ExecStop=/home/chatBot/bin/python main.py --stop
+ExecReload=/home/chatBot/bin/python main.py --restart
+TimeoutSec=30
+Restart=always
+
+
+#sudo nano /etc/systemd/system/new-application.service
+#-------------Start command
+# 
+# sudo systemctl start new-application
+# sudo systemctl stop new-application
+# sudo systemctl start new-application
+# sudo systemctl reload new-application
+# --------------status------
+# sudo systemctl status new-application
+#
