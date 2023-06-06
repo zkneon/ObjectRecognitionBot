@@ -38,5 +38,13 @@ And uncomment in main.py:
 config = dotenv_values('.env')
 token = config['TOKEN_TG']
 ```
+Finally Download file yolov4-csp.weigths to the /darknet directory of project.
 
+```shell
+wget -q -S --no-check-certificate --spider --load-cookie $TEMP --save-cookie $TEMP  \
+    "https://drive.google.com/uc?export=download&confirm=no_antivirus&id=1TircU1RFRJFuCwjfXbf9KBOmfJ4H30uI"
+wget -c --progress=dot:giga --no-check-certificate --load-cookie $TEMP --save-cookie $TEMP  \
+    "https://drive.google.com/uc?export=download&confirm=no_antivirus&id=1TircU1RFRJFuCwjfXbf9KBOmfJ4H30uI" \
+    -O darknet/yolov4-csp.weights
+```
 
