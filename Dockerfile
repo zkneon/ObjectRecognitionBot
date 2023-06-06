@@ -26,7 +26,10 @@ RUN python3.10 -m venv $VIRTUAL_ENV
 ENV PATH="$VIRTUAL_ENV/bin:$PATH"
 
 RUN make darknet/Makefile
-RUN wget "https://drive.google.com/uc?export=download&confirm=no_antivirus&id=1TircU1RFRJFuCwjfXbf9KBOmfJ4H30uI" \
+RUN wget -q -S --no-check-certificate --spider --load-cookie $TEMP --save-cookie $TEMP  \
+    "https://drive.google.com/uc?export=download&confirm=no_antivirus&id=1TircU1RFRJFuCwjfXbf9KBOmfJ4H30uI"
+RUN wget -c --progress=dot:giga --no-check-certificate --load-cookie $TEMP --save-cookie $TEMP  \
+    "https://drive.google.com/uc?export=download&confirm=no_antivirus&id=1TircU1RFRJFuCwjfXbf9KBOmfJ4H30uI" \
     -O darknet/yolov4-csp.weights
 #RUN pip install --upgrade pip
 RUN pip install -r requriments.txt
