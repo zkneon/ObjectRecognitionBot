@@ -17,8 +17,8 @@ Detecting object on foto from Telegram Bot.
 ### Build Docker image from Dockerfile
 
 ```shell
-git clone https://github.com/zkneon/chatBot
-cd /chatBot
+git clone https://github.com/zkneon/ObjectRecognitionBot
+cd /ObjectRecognitionBot
 ```
 
 ```shell
